@@ -1,13 +1,14 @@
 __author__ = '1000ch'
 
-from app import app
-from app.subscriptions import Subscriptions
+import flask
+from feedsnake import application
+from feedsnake.subscriptions import Subscriptions
 
-@app.route('/')
+@application.route('/')
 def show_entries():
   return 'Feedsnake.'
 
-@app.route('/update')
+@application.route('/update')
 def update_entries():
   feeds = Subscriptions('app.static/subscriptions.xml')
   entries = feeds.getEntries()
