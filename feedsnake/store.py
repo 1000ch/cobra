@@ -4,9 +4,9 @@ import pymongo
 
 class Store:
 
-  def __init__(self, host, port):
-    self.client = pymongo.MongoClient(host ,port)
-    self.entries = self.client.feedsnake.entries
+  def __init__(self):
+    self.connection = pymongo.Connection('127.0.0.1')
+    self.entries = self.connection.feedsnake.entries
 
   def all(self):
     return self.entries.find()
