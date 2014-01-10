@@ -9,6 +9,13 @@
       <div class="jumbotron">
         <h1>Feedsnake</h1>
       </div>
+      <ul>
+        {% for entry in entries %}
+        <li>
+          <h2><a href='{{ entry.link }}'>{{ entry.title }}</a></h2>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
   </body>

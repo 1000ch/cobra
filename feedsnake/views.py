@@ -7,7 +7,8 @@ from feedsnake.store import Store
 
 @application.route('/')
 def show_entries():
-  return 'Under development...'
+  store = Store()
+  return flask.render_template('index.html', entries = store.all())
 
 @application.route('/update')
 def update_entries():
