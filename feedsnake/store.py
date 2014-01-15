@@ -8,14 +8,17 @@ class Store:
 
   def __init__(self):
     # get url string from env
-    url = os.getenv('MONGOLAB_URI', 'mongodb://localhost:27017')
-    self.connection = pymongo.Connection(url)
+    url = os.environ.get('MONGOLAB_URI')
+    if url:
+      self.connection = pymongo.Connection(url)
+    else:
+      self.connection = pymongo.Connection('localhost', 27017)
 
     # authenticate
-    if '@' in url:
-      parsed = urlsplit(url)
-      user, password = parsed.netloc.split('@')[0].split(':')
-      self.connection.authenticate(user, password)
+    #if '@' in url:
+    #  parsed = urlsplit(url)
+    #  user, password = parsed.netloc.split('@')[0].split(':')
+    #  self.connection.authenticate(user, password)
 
     # get entries
     self.entries = self.connection.feedsnake.entries
