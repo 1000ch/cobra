@@ -40,3 +40,7 @@ class Store:
   def delete(self, object):
     result = self.entries.remove(object)
     return result
+
+  def clear(self):
+    result = self.entries.remove()
+    return result

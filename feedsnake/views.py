@@ -7,17 +7,26 @@ from feedsnake.store import Store
 
 @application.route('/')
 def show_entries():
-  store = Store()
-  return flask.render_template('index.html', entries = store.all())
+
+  # get entries from db
+  entries = Store().all()
+  return flask.render_template('index.html', entries = entries)
 
 @application.route('/update')
 def update_entries():
+
+  # get subscriptions
   feeds = Subscriptions('feedsnake/static/subscriptions.xml')
   entries = feeds.get_entries()
 
-  store = Store()
+  # connect to db
+  list = []
   for i, entry in enumerate(entries):
     dic = {'title': entry.title, 'link': entry.link, 'published': entry.published}
-    result = store.insert(dic)
+    list.append(dic)
 
-  return 'Updated entries.'
+  store = Store()
+  store.clear()
+  result = store.insert(list)
+
+  return flask.redirect('/')
