@@ -22,7 +22,13 @@ def update_entries():
   # connect to db
   list = []
   for i, entry in enumerate(entries):
-    dic = {'title': entry.title, 'link': entry.link, 'published': entry.published}
+    dic = {}
+    dic['title'] = entry.title
+    dic['link'] = entry.link
+    if entry.get('published') is not None:
+      dic['published'] = entry.published
+    elif entry.get('pubDate') is not None:
+      dic['published'] = entry.pubDate
     list.append(dic)
 
   store = Store()
