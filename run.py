@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 
-from feedsnake import application
-application.run()
+from cobra import app
+app.run()

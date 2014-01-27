@@ -1,4 +1,4 @@
-# Feedsnake
+# Cobra
 
 ## About
 
@@ -20,7 +20,7 @@ Install Python3.3 with pyenv.
 $ pyenv install 3.3.3
 ```
 
-Install dependency python modules.
+Install dependency modules.
 
 ```sh
 $ pip install flask

@@ -1,22 +1,22 @@
 __author__ = '1000ch'
 
 import flask
-from feedsnake import application
-from feedsnake.subscriptions import Subscriptions
-from feedsnake.store import Store
+from cobra import app
+from cobra.subscriptions import Subscriptions
+from cobra.store import Store
 
-@application.route('/')
+@app.route('/')
 def show_entries():
 
   # get entries from db
   entries = Store().all()
   return flask.render_template('index.html', entries = entries)
 
-@application.route('/update')
+@app.route('/update')
 def update_entries():
 
   # get subscriptions
-  feeds = Subscriptions('feedsnake/static/subscriptions.xml')
+  feeds = Subscriptions('cobra/static/subscriptions.xml')
   entries = feeds.get_entries()
 
   # connect to db

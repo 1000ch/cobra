@@ -1,1 +1,1 @@
-web: gunicorn feedsnake:application
+web: gunicorn cobra:app
