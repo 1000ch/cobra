@@ -18,7 +18,6 @@
     <outline text="FT LabsFT Labs" title="FT LabsFT Labs" type="rss" xmlUrl="http://labs.ft.com/feed/" htmlUrl="http://labs.ft.com"/>
     <outline text="TJ Holowaychuk" title="TJ Holowaychuk" type="rss" xmlUrl="http://tjholowaychuk.com/rss" htmlUrl="http://tjholowaychuk.com/"/>
     <outline text="substack in cyberspace" title="substack in cyberspace" type="rss" xmlUrl="http://substack.net/blog.xml" htmlUrl="http://substack.net/rss"/>
-    <outline text="Mozilla Hacks - the Web developer blog" title="Mozilla Hacks - the Web developer blog" type="rss" xmlUrl="https://hacks.mozilla.org/feed/" htmlUrl="https://hacks.mozilla.org"/>
     <outline text="Learning WebGL" title="Learning WebGL" type="rss" xmlUrl="http://learningwebgl.com/blog/?feed=rss2" htmlUrl="http://learningwebgl.com/blog"/>
     <outline text="raganwald.com" title="raganwald.com" type="rss" xmlUrl="http://raganwald.com/rss.xml" htmlUrl="http://raganwald.com/"/>
     <outline text="Performance Matters" title="Performance Matters" type="rss" xmlUrl="http://blog.patrickmeenan.com/feeds/posts/default?alt=rss" htmlUrl="http://blog.patrickmeenan.com/"/>
@@ -26,6 +25,5 @@
     <outline text="The CSS Ninja" title="The CSS Ninja" type="rss" xmlUrl="http://www.thecssninja.com/feed" htmlUrl="http://www.thecssninja.com"/>
     <outline text="Alex Sexton" title="Alex Sexton" type="rss" xmlUrl="http://alexsexton.com/?feed=rss2" htmlUrl="http://alexsexton.com/"/>
     <outline text="Flippin' Awesome" title="Flippin' Awesome" type="rss" xmlUrl="http://feeds.feedburner.com/FlippinAwesome" htmlUrl="http://flippinawesome.org"/>
-    <outline text="Chromium Dashboard - Features" title="Chromium Dashboard - Features" type="rss" xmlUrl="http://www.chromestatus.com/features.xml" htmlUrl="http://www.chromestatus.com"/>
   </body>
 </opml>
