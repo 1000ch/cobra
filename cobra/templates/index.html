@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Cobra</title>
-    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='maple.css') }}">
   </head>
   <body>
-    <div class='container'>
-      <div class="jumbotron">
-        <h1>Cobra</h1>
-      </div>
-      <ul>
+    <header class="barHead">
+      <h1>Cobra</h1>
+    </header>
+    <section>
+      <ul class="list list-a">
         {% for entry in entries %}
         <li>
           <h2><a href='{{ entry.link }}'>{{ entry.title }}</a></h2>
         </li>
         {% endfor %}
       </ul>
-    </div>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    </section>
   </body>
 </html>
