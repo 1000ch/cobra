@@ -9,14 +9,13 @@ class Store:
   def __init__(self):
     # get url string from env
     url = os.environ.get('MONGOHQ_URL')
+    print(url)
     if url:
-      connection = pymongo.Connection(url)
+      connection = pymongo.MongoClient(url)
       self.db = connection[urlparse(url).path[1:]]
     else:
-      print('hello')
       connection = pymongo.Connection('localhost', 27017)
       self.db = connection.db
-      print('db is selected')
 
   def all(self):
     return self.db.entries.find()
