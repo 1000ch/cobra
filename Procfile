@@ -1,1 +1,1 @@
-web: gunicorn cobra:app
+web: python run.py
