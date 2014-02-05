@@ -11,11 +11,11 @@ class Store:
     url = os.environ.get('MONGOHQ_URL')
     print(url)
     if url:
-      connection = pymongo.MongoClient(url)
-      self.db = connection[urlparse(url).path[1:]]
+      client = pymongo.MongoClient(url)
+      self.db = client[urlparse(url).path[1:]]
     else:
-      connection = pymongo.Connection('localhost', 27017)
-      self.db = connection.db
+      client = pymongo.MongoClient('localhost', 27017)
+      self.db = client.db
 
   def all(self):
     return self.db.entries.find()
