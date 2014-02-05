@@ -23,6 +23,6 @@ class Subscriptions:
       feed = feedparser.parse(outline)
       for i, entry in enumerate(feed.entries):
         entries.append(entry)
-        if i == 10:
+        if i == 5:
           break
     return entries
