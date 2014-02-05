@@ -22,9 +22,11 @@ def update_entries():
   # connect to db
   list = []
   for i, entry in enumerate(entries):
+
     dic = {}
     dic['title'] = entry.title
     dic['link'] = entry.link
+    dic['summary'] = entry.summary
     if entry.get('published') is not None:
       dic['published'] = entry.published
     elif entry.get('pubDate') is not None:

@@ -9,7 +9,7 @@ class Store:
   def __init__(self):
     # get url string from env
     url = os.environ.get('MONGOHQ_URL')
-    print(url)
+
     if url:
       client = pymongo.MongoClient(url)
       self.db = client[urlparse(url).path[1:]]
