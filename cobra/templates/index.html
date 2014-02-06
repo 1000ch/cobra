@@ -14,7 +14,8 @@
       <ul class="list list-a">
         {% for entry in entries %}
         <li>
-          <h2><a href='{{ entry.link }}'>{{ entry.title }}</a></h2>
+          <h1><a href='{{ entry.link }}'>{{ entry.title }}</a><date>{{ entry.date }}</date></h1>
+          <h2><a href='{{ entry.htmlUrl }}'>{{ entry.feedTitle }}</a></h2>
         </li>
         {% endfor %}
       </ul>

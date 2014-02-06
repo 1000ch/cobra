@@ -1,7 +1,7 @@
 __author__ = '1000ch'
 
 import xml.etree.ElementTree as etree
-import feedparser
+from cobra.models.feed import Feed
 
 class Subscriptions:
 
@@ -9,20 +9,11 @@ class Subscriptions:
     self.xml = etree.parse(opml)
     self.root = self.xml.getroot()
 
-  def get_outlines(self):
-    outlines = []
+  def get_feeds(self):
+    feeds = []
     for element in self.root.getiterator():
       if element.tag == 'outline':
-        outlines.append(element.attrib['xmlUrl'])
-    return outlines
+        feed = Feed(element.attrib['title'], element.attrib['htmlUrl'], element.attrib['xmlUrl'])
+        feeds.append(feed)
 
-  def get_entries(self):
-    outlines = self.get_outlines()
-    entries = []
-    for outline in outlines:
-      feed = feedparser.parse(outline)
-      for i, entry in enumerate(feed.entries):
-        entries.append(entry)
-        if i == 5:
-          break
-    return entries
+    return feeds

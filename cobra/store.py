@@ -17,11 +17,11 @@ class Store:
       client = pymongo.MongoClient('localhost', 27017)
       self.db = client.db
 
-  def all(self):
-    return self.db.entries.find()
+  def findall(self):
+    return self.db.entries.find().sort('date', pymongo.DESCENDING)
 
   def find(self, condition):
-    return self.db.entries.find(condition)
+    return self.db.entries.find(condition).sort('date', pymongo.DESCENDING)
 
   def insert(self, object):
     result = self.db.entries.insert(object)

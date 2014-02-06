@@ -9,31 +9,37 @@ from cobra.store import Store
 def show_entries():
 
   # get entries from db
-  entries = Store().all()
+  entries = Store().findall()
   return flask.render_template('index.html', entries = entries)
 
 @app.route('/update')
 def update_entries():
 
-  # get subscriptions
-  feeds = Subscriptions('cobra/static/subscriptions.xml')
-  entries = feeds.get_entries()
+  # get feeds
+  feeds = Subscriptions('cobra/static/subscriptions.xml').get_feeds()
 
   # connect to db
   list = []
-  for i, entry in enumerate(entries):
-
-    dic = {}
-    dic['title'] = entry.title
-    dic['link'] = entry.link
-    if entry.get('published') is not None:
-      dic['published'] = entry.published
-    elif entry.get('pubDate') is not None:
-      dic['published'] = entry.pubDate
-    list.append(dic)
+  for feed in feeds:
+    for entry in feed.entries:
+      dic = {}
+      dic['feedTitle'] = feed.title
+      dic['htmlUrl'] = feed.htmlUrl
+      dic['xmlUrl'] = feed.xmlUrl
+      dic['title'] = entry.title
+      dic['link'] = entry.link
+      dic['date'] = entry.date
+      list.append(dic)
 
   store = Store()
   store.clear()
   result = store.insert(list)
+
+  return flask.redirect('/')
+
+@app.route('/clear')
+def clear_entries():
+  store = Store()
+  result = store.clear()
 
   return flask.redirect('/')
