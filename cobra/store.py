@@ -18,10 +18,12 @@ class Store:
       self.db = client.db
 
   def findall(self):
-    return self.db.entries.find().sort('date', pymongo.DESCENDING)
+    cursor = self.db.entries.find().sort('date', pymongo.DESCENDING)
+    return list(cursor)
 
   def find(self, condition):
-    return self.db.entries.find(condition).sort('date', pymongo.DESCENDING)
+    cursor = self.db.entries.find(condition).sort('date', pymongo.DESCENDING)
+    return list(cursor)
 
   def insert(self, object):
     result = self.db.entries.insert(object)
