@@ -47,7 +47,6 @@
     <outline text="Nettuts+" title="Nettuts+" type="rss" xmlUrl="http://feeds.feedburner.com/nettuts-summary" htmlUrl="http://net.tutsplus.com"/>
     <outline text="ハブろぐ - havelog.ayumusato.com のフィード" title="ハブろぐ - havelog.ayumusato.com のフィード" type="rss" xmlUrl="http://feeds.feedburner.com/blogayumusato" htmlUrl="http://havelog.ayumusato.com/"/>
     <outline text="MOL" title="MOL" type="rss" xmlUrl="http://t32k.me/mol/feed/" htmlUrl="http://t32k.me/mol"/>
-    <outline text="Five | Archiving cssradar@twitter" title="Five | Archiving cssradar@twitter" type="rss" xmlUrl="http://five.studiomohawk.com/atom.xml" htmlUrl="http://five.studiomohawk.com"/>
     <outline text="OpenWeb" title="OpenWeb" type="rss" xmlUrl="http://openweb.co.jp/feed/" htmlUrl="http://openweb.co.jp"/>
     <outline text="CSS Weekly" title="CSS Weekly" type="rss" xmlUrl="http://feeds.feedburner.com/CSS-Weekly" htmlUrl="http://css-weekly.com"/>
     <outline text="Eric Bidelman" title="Eric Bidelman" type="rss" xmlUrl="http://ericbidelman.tumblr.com/rss" htmlUrl="http://ericbidelman.tumblr.com/"/>
@@ -66,10 +65,7 @@
     <outline text="blog :: Web notes.log" title="blog :: Web notes.log" type="rss" xmlUrl="http://blog.wnotes.net/blog/feed/rss2" htmlUrl="http://blog.wnotes.net/blog/entries"/>
     <outline text="The GitHub Blog" title="The GitHub Blog" type="rss" xmlUrl="https://github.com/blog/all.atom" htmlUrl="https://github.com/blog"/>
     <outline text="4waisenkinder" title="4waisenkinder" type="rss" xmlUrl="http://4waisenkinder.de/atom.xml" htmlUrl="http://4waisenkinder.de"/>
-    <outline text="document" title="document" type="rss" xmlUrl="http://imaya.blog.jp/index.rdf" htmlUrl="http://imaya.blog.jp/"/>
     <outline text="Chromium Dashboard - Features" title="Chromium Dashboard - Features" type="rss" xmlUrl="http://www.chromestatus.com/features.xml" htmlUrl="http://www.chromestatus.com"/>
-    <outline text="app" title="app" type="rss" xmlUrl="http://amasad.me/index.xml" htmlUrl="http://amasad.me/"/>
-    <outline text="(No title)" title="(No title)" type="rss" xmlUrl="http://girliemac.com/feed.xml" htmlUrl=""/>
     <outline text="Eric Bidelman" title="Eric Bidelman" type="rss" xmlUrl="http://feeds.feedburner.com/ericbidelman" htmlUrl="http://ericbidelman.tumblr.com/"/>
   </body>
 </opml>
