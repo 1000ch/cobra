@@ -16,16 +16,16 @@
     <header>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class='container' style="overflow: hidden; white-space: nowrap;">
-          <h1>Cobra<small> = Flask + MongoDB + Heroku;</small></h1>
+          <h1>Cobra<small> by <a href="http://github.com/1000ch">1000ch</a></small></h1>
         </div>
       </nav>
     </header>
     <div class='container'>
       <section class='row'>
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="list-group" id="js-entry">
             {% for entry in entries %}
-              <a href="{{ entry.link }}" class="list-group-item" data-feed="{{ entry.feedTitle }}">
+              <a href="{{ entry.link }}" target="_blank" class="list-group-item" data-feed="{{ entry.feedTitle }}">
                 <h4 class="list-group-item-heading">{{ entry.title }}</h4>
                 <p class="list-group-item-text">
                   <date>{{ entry.date }}</date> - {{ entry.feedTitle }}
@@ -34,7 +34,7 @@
             {% endfor %}
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="affix" role="complementary">
             <ul class="nav nav-pills" id="js-feed">
               {% for feed in feeds %}
