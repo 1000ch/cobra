@@ -10,7 +10,12 @@ def show_entries():
 
   # get entries from db
   entries = Store().findall()
-  return flask.render_template('index.html', entries = entries)
+  feeds = []
+  for entry in entries:
+    if not entry['feedTitle'] in feeds:
+      feeds.append(entry['feedTitle'])
+
+  return flask.render_template('index.html', entries = entries, feeds = feeds)
 
 @app.route('/update')
 def update_entries():
