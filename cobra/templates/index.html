@@ -55,27 +55,31 @@
         $feeds = $feed.find('li');
 
         $entry.on('touchstart', 'a', function (e) {
-          $(this).addClass('active');
+          this.classList.add('active');
         }).on('touchend', 'a', function (e) {
-          $(this).removeClass('active');
+          this.classList.remove('active');
         });
 
         $feed.on('click', 'li', function (e) {
-          var $this = $(this);
-          if ($this.hasClass('active')) {
+          this.classList.toggle('active');
+          var selected = [];
+          $feeds.each(function (index, element) {
+            if (element.classList.contains('active')) {
+              selected.push(element.getAttribute('data-feed'));
+            }
+          });
+          if (selected.length === 0) {
             $entries.removeClass('hidden');
           } else {
-            $feeds.removeClass('active');
             $entries.each(function (index, element) {
-              var $element = $(element);
-              if ($element.attr('data-feed') === $this.attr('data-feed')) {
-                $element.removeClass('hidden');
+              var name = element.getAttribute('data-feed');
+              if (selected.indexOf(name) !== -1) {
+                element.classList.remove('hidden');
               } else {
-                $element.addClass('hidden');
+                element.classList.add('hidden');
               }
             });
           }
-          $this.toggleClass('active');
         });
       });
     </script>
