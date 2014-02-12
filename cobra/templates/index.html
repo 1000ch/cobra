@@ -49,11 +49,12 @@
     <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'></script>
     <script>
       $(function () {
-        $entries = $('#js-entry').find('.list-group-item');
+        $entry = $('#js-entry');
+        $entries = $entry.find('a');
         $feed = $('#js-feed');
         $feeds = $feed.find('li');
 
-        $feed.on('touchstart', 'a', function (e) {
+        $entry.on('touchstart', 'a', function (e) {
           $(this).addClass('active');
         }).on('touchend', 'a', function (e) {
           $(this).removeClass('active');
