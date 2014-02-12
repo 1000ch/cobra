@@ -53,9 +53,9 @@
         $feed = $('#js-feed');
         $feeds = $feed.find('li');
 
-        $feed.on('touchstart', 'li', function (e) {
+        $feed.on('touchstart', 'a', function (e) {
           $(this).addClass('active');
-        }).on('touchend', 'li', function (e) {
+        }).on('touchend', 'a', function (e) {
           $(this).removeClass('active');
         });
 
