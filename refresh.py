@@ -22,3 +22,4 @@ for feed in feeds:
 store = Store()
 store.clear()
 store.insert(list)
+store.index()

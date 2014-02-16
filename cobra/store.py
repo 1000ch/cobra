@@ -21,8 +21,8 @@ class Store:
     cursor = self.db.entries.find().sort('date', pymongo.DESCENDING)
     return list(cursor)
 
-  def find(self, condition):
-    cursor = self.db.entries.find(condition).sort('date', pymongo.DESCENDING)
+  def find(self, condition, skip, limit):
+    cursor = self.db.entries.find(condition).sort('date', pymongo.DESCENDING).skip(skip).limit(limit)
     return list(cursor)
 
   def insert(self, object):
@@ -39,4 +39,8 @@ class Store:
 
   def clear(self):
     result = self.db.entries.remove()
+    return result
+
+  def index(self):
+    result = self.db.entries.ensure_index([('date', pymongo.DESCENDING)])
     return result

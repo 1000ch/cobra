@@ -38,13 +38,14 @@ def update_entries():
 
   store = Store()
   store.clear()
-  result = store.insert(list)
+  store.insert(list)
+  store.index()
 
   return flask.redirect('/')
 
 @app.route('/clear')
 def clear_entries():
   store = Store()
-  result = store.clear()
+  store.clear()
 
   return flask.redirect('/')
