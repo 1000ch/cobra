@@ -23,15 +23,19 @@ $ pyenv install 3.3.3
 Install dependency modules.
 
 ```sh
-$ pip install flask
-$ pip install feedparser
-$ pip install pymongo
+$ pip install -r requirements.txt
 ```
 
 Install MongoDB.
 
 ```sh
 $ brew install mongo
+```
+
+Start MongoDB.
+
+```sh
+$ mongod
 ```
 
 ## License
