@@ -7,19 +7,19 @@ from cobra.entry import EntryDAO
 feeds = Subscriptions('cobra/static/subscriptions.xml').get_feeds()
 
 # connect to db
-list = []
+entries = []
 for feed in feeds:
-  for entry in feed.entries:
-    dic = {}
-    dic['feedTitle'] = feed.title
-    dic['htmlUrl'] = feed.htmlUrl
-    dic['xmlUrl'] = feed.xmlUrl
-    dic['title'] = entry.title
-    dic['link'] = entry.link
-    dic['date'] = entry.date
-    list.append(dic)
+    for entry in feed.entries:
+        entries.append({
+            'feedTitle': feed.title,
+            'htmlUrl': feed.htmlUrl,
+            'xmlUrl': feed.xmlUrl,
+            'title': entry.title,
+            'link': entry.link,
+            'date': entry.date
+        })
 
-entryDao = EntryDAO()
-entryDao.clear()
-entryDao.insert(list)
-entryDao.index()
+entry_dao = EntryDAO()
+entry_dao.clear()
+entry_dao.insert(list)
+entry_dao.index()
