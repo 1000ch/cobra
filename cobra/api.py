@@ -1,5 +1,6 @@
 __author__ = '1000ch'
 
+from flask import jsonify, make_response
 from flask.ext import restful
 from flask.ext.restful import reqparse
 from cobra import app
@@ -17,14 +18,16 @@ class API(restful.Resource):
 
     def get(self):
 
-        entries = []
+        array = []
         args = self.parser.parse_args()
 
         if args.skip is not None and args.limit is not None:
             entries = self.entry_dao.find({}, args.skip, args.limit)
+            for entry in entries:
+                del entry['_id']
+                array.append(entry)
 
-        print(entries)
-        return {'entries': 0}
+        return make_response(jsonify({'entries': array}))
 
 #'/api/get/<int:skip>/<int:limit>'
 api.add_resource(API, '/api/get')
