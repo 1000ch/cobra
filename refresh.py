@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from cobra.subscriptions import Subscriptions
-from cobra.store import Store
+from cobra.entry import EntryDAO
 
 # get feeds
 feeds = Subscriptions('cobra/static/subscriptions.xml').get_feeds()
@@ -19,7 +19,7 @@ for feed in feeds:
     dic['date'] = entry.date
     list.append(dic)
 
-store = Store()
-store.clear()
-store.insert(list)
-store.index()
+entryDao = EntryDAO()
+entryDao.clear()
+entryDao.insert(list)
+entryDao.index()

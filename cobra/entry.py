@@ -4,7 +4,7 @@ import os
 import pymongo
 from urllib.parse import urlparse
 
-class Store:
+class EntryDAO:
 
   def __init__(self):
     # get url string from env
