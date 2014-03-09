@@ -21,5 +21,5 @@ for feed in feeds:
 
 entry_dao = EntryDAO()
 entry_dao.clear()
-entry_dao.insert(list)
+entry_dao.insert(entries)
 entry_dao.index()
