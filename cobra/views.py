@@ -19,9 +19,9 @@ def show_entries():
         if not entry['feedTitle'] in feeds:
             feeds.append(entry['feedTitle'])
 
-    top_entries = entry_dao.find({}, 0, 20)
+    #top_entries = entry_dao.find({}, 0, 20)
 
-    return flask.render_template('index.html', entries = top_entries, feeds = feeds)
+    return flask.render_template('index.html', entries = entries, feeds = feeds)
 
 @app.route('/update')
 def update_entries():
