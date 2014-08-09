@@ -2,7 +2,9 @@
 
 ## About
 
-This is rss reader application.
+RSS Reader with Flask+MongoDB.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Premise
 
