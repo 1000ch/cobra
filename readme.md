@@ -2,7 +2,7 @@
 
 ## About
 
-RSS Reader with Flask+MongoDB.
+RSS Reader made with Flask+MongoDB.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
@@ -16,7 +16,7 @@ RSS Reader with Flask+MongoDB.
 
 ## Development
 
-Install Python3.3 with pyenv.
+Install Python 3.3 with pyenv.
 
 ```sh
 $ pyenv install 3.3.3
@@ -24,22 +24,22 @@ $ pyenv install 3.3.3
 
 Install dependency modules.
 
-```sh
+```bash
 $ pip install -r requirements.txt
 ```
 
 Install MongoDB.
 
-```sh
+```bash
 $ brew install mongo
 ```
 
 Start MongoDB.
 
-```sh
+```bash
 $ mongod
 ```
 
 ## License
 
-MIT.
+MIT
