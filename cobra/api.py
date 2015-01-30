@@ -1,5 +1,3 @@
-__author__ = '1000ch'
-
 from flask import jsonify, make_response
 from flask.ext import restful
 from flask.ext.restful import reqparse

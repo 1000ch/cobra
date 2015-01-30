@@ -1,5 +1,3 @@
-__author__ = '1000ch'
-
 import flask
 from cobra import app
 from cobra.subscriptions import Subscriptions

@@ -1,5 +1,3 @@
-__author__ = '1000ch'
-
 import os
 import pymongo
 from urllib.parse import urlparse

@@ -1,6 +1,3 @@
-__author__ = '1000ch'
-
-
 class Entry():
 
     def __init__(self, title, link, date):

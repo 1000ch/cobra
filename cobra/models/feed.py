@@ -1,5 +1,3 @@
-__author__ = '1000ch'
-
 import dateutil.parser
 import feedparser
 from cobra.models.entry import Entry

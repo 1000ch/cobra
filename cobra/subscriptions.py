@@ -1,5 +1,3 @@
-__author__ = '1000ch'
-
 import xml.etree.ElementTree as etree
 from cobra.models.feed import Feed
 
