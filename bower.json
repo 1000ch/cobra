@@ -8,8 +8,8 @@
   "description": "RSS Reader with Flask+MongoDB.",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "~3.2.0",
-    "underscore": "~1.7.0",
-    "jquery": "~2.1.1"
+    "bootstrap": "~3.3.2",
+    "underscore": "~1.8.2",
+    "jquery": "~2.1.3"
   }
 }

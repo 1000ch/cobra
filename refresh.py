@@ -4,7 +4,7 @@ from cobra.subscriptions import Subscriptions
 from cobra.entry import EntryDAO
 
 # get feeds
-feeds = Subscriptions('cobra/static/subscriptions.xml').get_feeds()
+feeds = Subscriptions('subscriptions.xml').get_feeds()
 
 # connect to db
 entries = []
